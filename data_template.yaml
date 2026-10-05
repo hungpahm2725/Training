@@ -1,0 +1,28 @@
+# Cấu hình tập dữ liệu nhận diện sâu bệnh trên cây đậu
+# Đề tài Đồ án Tốt nghiệp (DATT)
+#
+# ĐÂY LÀ FILE MẪU ĐỂ THAM KHẢO, KHÔNG PHẢI FILE ĐƯỢC DÙNG KHI CHẠY.
+#   - Bài toán PHÂN LOẠI (đang dùng): train_classification.py nhận thẳng thư mục
+#     training/datasets/bean_disease, không đọc file yaml này.
+#   - Bài toán PHÁT HIỆN: train_detection.py tự sinh file data.yaml riêng với
+#     đường dẫn tuyệt đối, không đọc file này.
+#
+# Danh sách lớp dưới đây khớp đúng 5 thư mục con trong dataset.
+
+# Đường dẫn thư mục chứa dữ liệu
+path: ./datasets/bean_disease
+train: train
+val: val
+test: test
+
+# Số lượng lớp
+nc: 5
+
+# Tên lớp. Thứ tự này khớp thứ tự thư mục theo bảng chữ cái, đúng như
+# mô hình đã huấn luyện. KHÔNG đổi thứ tự, nếu không chỉ số lớp sẽ lệch.
+names:
+  0: Angular Leaf Spot       # Bệnh đốm lá góc cạnh (Pseudocercospora griseola)
+  1: Anthracnose             # Bệnh thán thư (Colletotrichum lindemuthianum)
+  2: Fresh Leaf              # Lá khỏe mạnh (Normal Growth)
+  3: Mosaic Virus            # Bệnh virus khảm lá (Bean Common Mosaic Virus)
+  4: Rust                    # Bệnh gỉ sắt (Uromyces appendiculatus)
